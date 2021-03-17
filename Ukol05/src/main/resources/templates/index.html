@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly-Index.css"
+          th:href="${'css/styly-Index.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Jsi miláčkem pejsků?</h1>
+
+        <p class="uvod"><strong>Psí láska je samozřejmě bezpodmínečná. Ale přece jen, někteří z nás jsou oblíbenější než jiní. Zjisti, jak si vedeš :)</strong></p>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td class="otazka">Máš ráda pejsky?</td>
+                    <td>
+                        <label for="love1">Ano</label>
+                        <input id="love1" name="love" value="5" type="radio" required>
+                        <label for="love2">Ne</label>
+                        <input id="love2" name="love" value="0" type="radio" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="otazka">Jsi přizpůsobivá?</td>
+                    <td>
+                        <label for="adaptability1">Ano</label>
+                        <input id="adaptability1" name="adaptability" value="5" type="radio" required>
+                        <label for="adaptability2">Ne</label>
+                        <input id="adaptability2" name="adaptability" value="0" type="radio" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="otazka">Nosíš po kapsách dobroty?</td>
+                    <td>
+                        <label for="treats1">Ano</label>
+                        <input id="treats1" name="treats" value="3" type="radio" required>
+                        <label for="treats2">Ne</label>
+                        <input id="treats2" name="treats" value="0" type="radio" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="otazka">Co ráda jíš?</td>
+                    <td>
+                        <select id="preferedFood" name="preferedFood" required>
+                            <option value="4">Maso</option>
+                            <option value="3">Sýr</option>
+                            <option value="1">Ovoce</option>
+                            <option value="0">Zelenina</option>
+                            <option value="2">Pečivo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="otazka">Kolik času strávíš v práci?</td>
+                    <td>
+                        <select id="timeAtWork" name="timeAtWork" required>
+                            <option value="4">Home-office</option>
+                            <option value="3">Zkrácený úvazek</option>
+                            <option value="2">Běžná pracovní doba</option>
+                            <option value="1">Dlouhé a nepravidelné směny</option>
+                            <option value="0">Jsem workoholik, v práci i spím</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="otazka">Co uděláš, když za tebou přijde pes?</td>
+                    <td>
+                        <select id="game" name="game" required>
+                            <option value="3">Dáš mu pamlsek</option>
+                            <option value="4">Jdeš si s ním hrát</option>
+                            <option value="1">Ignoruješ ho</option>
+                            <option value="2">Podrbeš ho za ušima</option>
+                            <option value="0">Odeženeš ho/pošleš na místo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="otazka">Který sport tě baví nejvíc?</td>
+                    <td>
+                        <select id="sport" name="sport" required>
+                            <option value="2">Tenis</option>
+                            <option value="3">Běhání</option>
+                            <option value="1">Jóga</option>
+                            <option value="4">Turistika</option>
+                            <option value="0">Box</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <tr>
+                <input type="submit" value="Vyhodnotit" class="tlacitko">
+            </tr>
+        </form>
+
+        <img th:src="${'images/number0-small.jpg'}" src="../static/images/number0-small.jpg" >
+
+    </div>
+</body>
+</html>

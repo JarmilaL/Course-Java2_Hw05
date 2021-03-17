@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly-result1.css"
+          th:href="@{'css/styly-result' + ${styles} + '.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Jsi miláčkem pejsků?</h1>
+
+        <p th:text="${result}" class="vysledek">Pejsi mají rádi skoro každého :)</p>
+
+        <img th:src="'images/number' + ${image} + '-small.jpg'" src="../static/images/number0-small.jpg">
+
+    </div>
+</body>
+</html>
